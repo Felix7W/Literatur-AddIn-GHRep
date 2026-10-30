@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Literatur-Add-in</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="taskpane.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Literatur-Add-in</h1>
+    <p class="sub">Prototyp – Etappe 0</p>
+  </header>
+
+  <p id="not-in-word" class="warn" hidden>
+    Diese Seite läuft nicht in Word. Lade das Add-in in Word, um die Tests auszuführen.
+    Den PDF-Viewer kannst du aber auch so testen:
+    <a href="viewer.html?file=test/beispiel.pdf&amp;page=2&amp;q=Gute%20Literaturverwaltung%20spart%20beim%20Schreiben%20viel%20Zeit." target="_blank">Viewer öffnen</a>
+  </p>
+
+  <section>
+    <h2>1. Umgebung</h2>
+    <dl id="env"></dl>
+  </section>
+
+  <section>
+    <h2>2. Zitat einfügen</h2>
+    <p>Setze den Cursor ins Dokument und füge ein Test-Zitat ein.</p>
+    <button id="btn-insert" disabled>Test-Zitat einfügen</button>
+  </section>
+
+  <section>
+    <h2>3. Vom Zitat zum PDF</h2>
+    <p>Klicke im Dokument in ein eingefügtes Zitat.</p>
+    <div id="selected" class="card muted">Kein Zitat ausgewählt.</div>
+    <button id="btn-open-pdf" disabled>Im PDF öffnen</button>
+  </section>
+
+  <section>
+    <h2>4. Dokument lesen</h2>
+    <button id="btn-read" disabled>Text und Zitate auslesen</button>
+  </section>
+
+  <section>
+    <h2>Testprotokoll</h2>
+    <p>Schick mir dieses Protokoll, dann sehe ich, was auf deinem Gerät funktioniert.</p>
+    <textarea id="log" readonly rows="10"></textarea>
+    <button id="btn-copy">Protokoll kopieren</button>
+  </section>
+</body>
+</html>
